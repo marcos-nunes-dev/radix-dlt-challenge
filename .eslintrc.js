@@ -1,11 +1,9 @@
 module.exports = {
-    // Specifies the ESLint parser
-    parser: '@typescript-eslint/parser',
     extends: [
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
-        'prettier/@typescript-eslint',
         'plugin:prettier/recommended',
+        'prettier',
     ],
     settings: {
         react: {
@@ -39,6 +37,8 @@ module.exports = {
         '@typescript-eslint/ban-ts-ignore': 'off',
         // needed for NextJS's jsx without react import
         'react/react-in-jsx-scope': 'off',
+        '@typescript-eslint/no-var-requires': 0,
+        'react/display-name': 'off',
     },
     globals: { React: 'writable' },
 };

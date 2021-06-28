@@ -1,8 +1,13 @@
 module.exports = {
+    collectCoverage: true,
     collectCoverageFrom: [
-        '**/*.{js,jsx,ts,tsx}',
+        '**/*.{jsx,ts,tsx}',
+        '!**/*.{js}',
+        '!**/*.stories.tsx',
         '!**/*.d.ts',
         '!**/node_modules/**',
+        '!**/pages/**',
+        '!**/stories/**',
     ],
     setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
     testPathIgnorePatterns: ['/node_modules/', '/.next/'],

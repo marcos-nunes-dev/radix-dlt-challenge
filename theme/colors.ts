@@ -28,7 +28,7 @@ const wine = {
 };
 
 const gray = {
-    50: '#F7F9FA',
+    50: '#f2f2fc',
     100: '#DDDFE1',
     200: '#C3C5C8',
     300: '#AAACAE',
@@ -103,7 +103,8 @@ const colors = {
     blue,
     orange,
     red,
-    primary: wine['800'],
+    primary: '#003057',
+    secondary: '#00c389',
     success: green['600'],
     info: blue['500'],
     alert: orange['300'],

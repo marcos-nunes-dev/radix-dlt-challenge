@@ -5,6 +5,32 @@ body,
     height: 100%;
 }
 
-body {
-    font-family: 'Nunito sans', sans-serif;
+body{
+    font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+.ant-result-title, .ant-result-subtitle{
+    color: #003057 !important;
+}
+
+.ant-result-title{
+    font-weight: bold;
+}
+
+/* .ant-form-item-control-input-content .ant-input,
+.ant-form-item-control-input-content .ant-input-password {
+    background-color: #f2f2fc !important;
+    color: #003057 !important;
+    border: 0 !important;
+}
+
+.ant-form-item-control-input-content .ant-input{
+    padding: 10px !important;
+    padding-left: 15px !important;
+} */
+
+.ant-input, .ant-input-password{
+    background-color: #f2f2fc !important;
+    color: #003057 !important;
+    border: 0 !important;
 }

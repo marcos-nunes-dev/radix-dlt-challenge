@@ -1,5 +1,6 @@
 import Document, {
     DocumentContext,
+    Html,
     Head,
     Main,
     NextScript,
@@ -36,10 +37,11 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            <html>
+            <Html>
                 <Head>
+                    <link rel='preconnect' href='https://fonts.gstatic.com' />
                     <link
-                        href='https://fonts.googleapis.com/css?family=Nunito+Sans:400,500,600,700'
+                        href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap'
                         rel='stylesheet'
                     />
                     <link rel='stylesheet' type='text/css' href='/global.css' />
@@ -51,7 +53,7 @@ export default class MyDocument extends Document {
                 </Head>
                 <Main />
                 <NextScript />
-            </html>
+            </Html>
         );
     }
 }
