@@ -6,6 +6,7 @@ import { Box } from 'components/Box';
 import { Text } from 'components/Text';
 import { ColumnsType } from 'antd/es/table';
 import { ContactType } from 'types/definitions';
+import { tableColumnTextFilterConfig } from './TextFilterConfig';
 
 interface Props {
     data: ContactType[];
@@ -39,21 +40,49 @@ export function Table({
                         <Text ml='3'>{text}</Text>
                     </Box>
                 ),
+                ...tableColumnTextFilterConfig<ContactType>(),
+                onFilter: (value, record) => {
+                    return record.name
+                        .toString()
+                        .toLowerCase()
+                        .includes(value.toString().toLowerCase());
+                },
             },
             {
                 title: 'Phone',
                 dataIndex: 'phone',
                 key: 'phone',
+                ...tableColumnTextFilterConfig<ContactType>(),
+                onFilter: (value, record) => {
+                    return record.phone
+                        .toString()
+                        .toLowerCase()
+                        .includes(value.toString().toLowerCase());
+                },
             },
             {
                 title: 'Email',
                 dataIndex: 'email',
                 key: 'email',
+                ...tableColumnTextFilterConfig<ContactType>(),
+                onFilter: (value, record) => {
+                    return record.email
+                        .toString()
+                        .toLowerCase()
+                        .includes(value.toString().toLowerCase());
+                },
             },
             {
                 title: 'Address',
                 dataIndex: 'address',
                 key: 'address',
+                ...tableColumnTextFilterConfig<ContactType>(),
+                onFilter: (value, record) => {
+                    return record.address
+                        .toString()
+                        .toLowerCase()
+                        .includes(value.toString().toLowerCase());
+                },
             },
             {
                 title: 'Action',
